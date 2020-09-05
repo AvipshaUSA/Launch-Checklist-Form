@@ -45,13 +45,13 @@ window.addEventListener("load", function(){
    
    
    if(pilotName.value === "" || copilotName.value === "" || fuelLevel.value === "" ||  cargoMass.value === ""){
-   alert("All fields are required")
+   alert("All fields are required.")
    event.preventDefault();
    }else if(!isNaN(pilotName.value) || !isNaN(copilotName.value)){
-   alert("Number!! Enter valid name.")
+   alert("Enter valid name.")
    event.preventDefault();
    }else if( isNaN(fuelLevel.value) || isNaN(cargoMass.value)){
-      alert("Enter valid fuel evel or Cargo mass")
+      alert("Enter valid fuel evel or Cargo mass.")
       event.preventDefault();
    }else if(fuelLevel.value<10000){
       faultyItems.style.visibility = "visible"
