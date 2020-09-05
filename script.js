@@ -98,11 +98,3 @@ window.addEventListener("load", function(){
 </ol>
 <img src="${}">
 */
-/*
-preventDefault()
-From Ryan Doherty to Everyone:  11:36 AM
-If the user submits a fuel level that is too low (less than 10,000 liters), change faultyItems to visible with an updated fuel status stating that there is not enough fuel for the journey. The text of the h2 element, launchStatus, should also change to "Shuttle not ready for launch" and the color should change to red.
-pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
-let pilotStatus = document.getElementById("pilotStatus");
-
-*/
