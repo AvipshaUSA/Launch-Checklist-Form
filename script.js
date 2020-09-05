@@ -54,18 +54,18 @@ window.addEventListener("load", function(){
       alert("Enter valid fuel evel or Cargo mass")
       event.preventDefault();
    }else if(fuelLevel.value<10000){
-      pilotStatus.innerHTML = `Pilot ${pilotName.value} Ready`
-      copilotStatus.innerHTML =`Co-pilot ${copilotName.value} Ready`
       faultyItems.style.visibility = "visible"
+      pilotStatus.innerHTML = `Pilot ${pilotName.value} Ready`
+      copilotStatus.innerHTML =`Co-pilot ${copilotName.value} Ready` 
       fuelStatus.innerHTML = `There is not enough fuel for the journey`
       launchStatus.innerHTML =`<h2>Shuttle not ready for launch</h2>`
       launchStatus.style.color="red"
       
       event.preventDefault();
    }else if ( cargoMass.value > 10000){
+      faultyItems.style.visibility = "visible"
       pilotStatus.innerHTML = `Pilot ${pilotName.value} Ready`
       copilotStatus.innerHTML =`Co-pilot ${copilotName.value} Ready`
-      faultyItems.style.visibility = "visible"
       launchStatus.innerHTML =`<h2>Shuttle not ready for launch</h2>`
       cargoStatus.innerHTML = ` There is too much mass for the shuttle to take off`
       launchStatus.style.color = "red"
@@ -76,6 +76,8 @@ window.addEventListener("load", function(){
    pilotStatus.innerHTML = `Pilot ${pilotName.value} Ready`
    copilotStatus.innerHTML =`Co-pilot ${copilotName.value} Ready`
    launchStatus.innerHTML =`<h2>Shuttle is ready for launch</h2>`
+   fuelStatus.innerHTML = `Fuel level high enough for launch`
+   cargoStatus.innerHTML = ` Cargo mass low enough for launch`
    launchStatus.style.color="green"
    console.log(mission())
    event.preventDefault();
